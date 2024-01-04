@@ -1,0 +1,16 @@
+/* eslint-disable */
+// var REGEXP = /^-?\d+(\.\d+)?$/;
+
+function isNumeric(input) {
+	return !isNaN(parseFloat(input)) && isFinite(input);
+}
+
+function addUnit(value) {
+	if (value == null) {
+		return undefined;
+	}
+
+	return isNumeric(value) ? value + 'px' : value;
+}
+
+module.exports = addUnit;
