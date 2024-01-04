@@ -1,6 +1,7 @@
 <template>
 	<view>
-		<!-- <demo-block title="基础用法" padding>
+		<van-image width="100" height="100" :src="src" />
+		<demo-block title="基础用法" padding>
 			<van-row>
 				<van-image width="100" height="100" :src="src" />
 			</van-row>
@@ -39,7 +40,6 @@
 				</van-col>
 			</van-row>
 		</demo-block>
-
 		<demo-block title="加载失败提示" padding>
 			<van-row gutter="20">
 				<van-col span="8">
@@ -54,7 +54,7 @@
 					<view class="text">自定义提示</view>
 				</van-col>
 			</van-row>
-		</demo-block> -->
+		</demo-block>
 	</view>
 </template>
 
@@ -79,7 +79,8 @@
 			}
 		},
 		onLoad() {
-
+			console.log('this.$children')
+			console.log(this.$children)
 		},
 		methods: {
 			onClick(event) {

@@ -63,11 +63,6 @@
 			},
 			titleStyle: String,
 		},
-		data() {
-			return {
-
-			};
-		},
 		methods: {
 			onClick(event) {
 				this.$emit('click', event.detail);

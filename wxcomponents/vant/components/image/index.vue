@@ -23,14 +23,12 @@
 <script>
 	import VanIcon from '../icon/index.vue'
 	import VanLoading from '../loading/index.vue'
-	import button from '../mixins/button'
 	export default {
 		name: "van-image",
 		components: {
 			VanIcon,
 			VanLoading
 		},
-		mixins: [button],
 		classes: ['custom-class', 'loading-class', 'error-class', 'image-class'],
 		props: {
 			src: {
@@ -52,19 +50,19 @@
 			showMenuByLongpress: Boolean,
 			fit: {
 				type: String,
-				value: 'fill',
+				default: 'fill',
 			},
 			webp: {
 				type: Boolean,
-				value: false,
+				default: false,
 			},
 			showError: {
 				type: Boolean,
-				value: true,
+				default: true,
 			},
 			showLoading: {
 				type: Boolean,
-				value: true,
+				default: true,
 			},
 		},
 		data() {
@@ -92,5 +90,5 @@
 </script>
 
 <style lang="scss" scoped>
-
+	@import './index.scss';
 </style>
